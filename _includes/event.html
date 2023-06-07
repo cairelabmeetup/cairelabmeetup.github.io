@@ -1,0 +1,50 @@
+{% assign event = include.event %}
+<div itemscope itemtype="http://schema.org/SocialEvent" itemid="{{ event.url | prepend: site.baseurl }}" class="event">
+  
+  <div style="display:inline-block">
+    <div style="float:left">
+      <img src="{{ event.logo }}" width="100" style="-webkit-box-shadow: 10px 10px 10px -15px #333; "/> 
+    </div>
+    <div style="float:left; margin-left:10px;">
+      <header class="event-header">
+        <h1 class="event-title">
+          {% include event-title.html event=event %}
+        </h1>
+      </header>
+    </div>
+  </div>
+
+
+  <div class="event-description text" itemprop="description">
+    {{ event.content | markdownify}}
+    {% include meetup-rsvp-button.html event=event %}
+  </div>
+
+  {% if event.talks %}
+    <ol class="talk-list is-fancy">
+      {% include talk-list.html talks=event.talks show_abstract=include.show_abstracts %}
+    </ol>
+  {% elsif include.call_for_talks %}
+    <p><em>
+      We're currently looking for talks.
+
+      {% if event.links['Planning discussion on Github'] %}
+        <a href="{{ event.links['Planning discussion on Github'] }}">Help us!</a>
+      {% else %}
+        <a href="{{ site.feedback_url }}">Help us!</a>
+      {% endif %}
+    </em></p>
+  {% endif %}
+
+  {% if include.show_registerlink %}
+    <strong>
+      If you haven't, <a href="https://forms.office.com/r/LnsVnqKdL8">register on our mailing list</a>  for more details of this and upcoming events.
+    </strong>    
+  {% endif %}
+  
+  {% if include.show_address %}
+    {% include location.html location=event.location %}
+  {% endif %}
+
+  {% include event-links.html event=event %}
+</div>

@@ -1,0 +1,39 @@
+<header class="site-header">
+  <div class="wrapper">
+    <div class="left">
+      <!-- {% if include.variant == "start-page" %}<h1>{% endif %} -->
+      
+        <h1>
+          <a class="site-title" href="{{ site.baseurl }}/">
+            {{ site.title }}
+          </a>
+        </h1>
+      <!-- {% if include.variant == "start-page" %}</h1>{% endif %} -->
+
+      <p class="byline">
+        {{ site.description }}
+      </p>
+
+    </div>
+
+    <div class="right">
+      <div>
+        <div>
+          <a href="{{ site.baseurl }}/">
+            {% include logo.html %}
+          </a>
+        </div>
+        <div>
+          <p align="center">
+            <strong>
+              <a href="https://forms.office.com/r/LnsVnqKdL8" target="_blank">Subscribe</a> 
+              | 
+              <a href="https://join.slack.com/t/airesearchlumc/shared_invite/zt-18oedbgvk-EJhVE_tCcVg9PcUXqYu1iQ" target="_blank">{% include logo-slack.html %}</a>
+            </strong>
+          </p>
+      </div>
+    </div>
+    </div>
+
+  </div>
+</header>

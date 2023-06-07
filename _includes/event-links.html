@@ -1,0 +1,15 @@
+{% assign event = include.event %}
+{% if event.links.size > 0 %}
+<div class="event-links">
+  <p>
+    More information about this work can be found here: 
+  </p>
+  <ul>
+  {% for link in event.links %}
+    <li>
+      <a href="{{ link[1] }}" itemprop="sameAs">{{ link[0] }}</a>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+{% endif %}

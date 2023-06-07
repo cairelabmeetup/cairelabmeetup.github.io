@@ -1,0 +1,38 @@
+# Site settings
+title: CAIRELab Meetups
+description: "Agenda for AI meetups conducted at Leiden University Medical Center (LUMC), The Netherlands."
+baseurl: ""
+url: "http://CHANGEME.com"
+author:
+  name: Prerak Mody 
+  twitter: modybaba101
+  github: lumcaimeetup
+  meetup: 
+  email: AI_Research_Meetings_RT@lumc.nl
+
+feedback_url: https://github.com/lumcaimeetup/lumcaimeetup.github.io
+source_url: https://github.com/lumcaimeetup/lumcaimeetup.github.io
+
+google_maps_api_key: AIzaSyBkz492n9gf895Tfi12ikKVurgIHHOFmK4
+
+# Build settings
+permalink: "/:year/:month/:day/:title.html"
+markdown: kramdown
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "event"
+
+# Content settings
+future: true # we use dates for the actual meetup time, not the post publication time
+timezone: "Europe/Berlin"
+
+exclude:
+  - .vscode
+  - .gitignore
+  - meetup-orga
+
+# Analytics
+google_analytics: "G-ZYBE2WMXLB"
