@@ -1,3 +1,11 @@
+Deck, LUMC Onderzoeksgebouw:
+  short: "Deck, LUMC Onderzoeksgebouw (Building 2), LUMC"
+  name: "Deck, LUMC Onderzoeksgebouw (Building 2), LUMC"
+  street: "Albinusdreef, Leiden"
+  city: "Leiden"
+  web: "https://www.openstreetmap.org/way/977927229#map=19/52.16647/4.47562"
+  osm: "https://www.openstreetmap.org/way/977927229#map=19/52.16647/4.47562"
+
 J-01-116:
   short: "J-01-116, Building 1, LUMC"
   name: "J-01-116, Building 1"
